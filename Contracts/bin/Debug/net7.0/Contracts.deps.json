@@ -6,14 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "Entities/1.0.0": {
+      "Contracts/1.0.0": {
         "dependencies": {
-          "EntityFramework": "6.4.4",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.13",
-          "Microsoft.EntityFrameworkCore": "7.0.13"
+          "Entities": "1.0.0"
         },
         "runtime": {
-          "Entities.dll": {}
+          "Contracts.dll": {}
         }
       },
       "EntityFramework/6.4.4": {
@@ -414,11 +412,21 @@
             "fileVersion": "4.700.19.56404"
           }
         }
+      },
+      "Entities/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore": "7.0.13"
+        },
+        "runtime": {
+          "Entities.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Entities/1.0.0": {
+    "Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -681,6 +689,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

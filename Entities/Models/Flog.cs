@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Entities.Models;
 public class Flog
 {
@@ -12,6 +16,10 @@ public class Flog
 	[Required(ErrorMessage = "Content is required.")]
 	public string Content {get; set;}
 
+	[Display(Name = "post created date")]
+	[Required(ErrorMessage = "Created date is required.")]
+	public DateTime Created {get; set;}
+
 	[Required(ErrorMessage = "Author is required.")]
 	public Guid Author {get; set;}
 
@@ -25,8 +33,7 @@ public class Flog
 
 	public IEnumerable<Guid> Tags {get; set;}
 
-	public int Viewed {get; set;}
+	public long Viewed {get; set;}
 
-	public int Rate {get; set;}
-	
+	public long Rate {get; set;}
 }

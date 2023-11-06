@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Entities.Models;
-public class User
+public class User : IdentityUser
 {
 	[Column("UserId")]
 	public Guid Id {get; set;}
@@ -12,7 +13,15 @@ public class User
 	[Required(ErrorMessage = "User name is required.")]
 	public string Nickname {get; set;}
 
+	[Display(Name = "BIO")]
 	public string Bio {get; set;}
+
+	[Display(Name = "Status")]
+	public string Status {get; set;}
+
+	[Display(Name = "user created date")]
+	[Required(ErrorMessage = "Created date is required.")]
+	public DateTime Created {get; set;}
 
 	[Display(Name = "birthday")]
 	[Required(ErrorMessage = "Birthday is required.")]
@@ -29,7 +38,7 @@ public class User
 	[RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Phone number is invalid.")]
 	public string Phone {get; set;}
 
-	[Display(name="posts")]
+	[Display(Name="posts")]
 	public IEnumerable<Guid> Posts {get; set;}
 
 	public IEnumerable<Guid> Friends {get; set;}
