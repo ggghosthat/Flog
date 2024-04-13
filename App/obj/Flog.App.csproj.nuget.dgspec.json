@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\Flog\\Flog.App\\Flog.App.csproj": {}
+    "D:\\repos\\Flog\\App\\Flog.App.csproj": {}
   },
   "projects": {
-    "D:\\repos\\Flog\\Flog.App\\Flog.App.csproj": {
+    "D:\\repos\\Flog\\App\\Flog.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\Flog\\Flog.App\\Flog.App.csproj",
+        "projectUniqueName": "D:\\repos\\Flog\\App\\Flog.App.csproj",
         "projectName": "Flog.App",
-        "projectPath": "D:\\repos\\Flog\\Flog.App\\Flog.App.csproj",
+        "projectPath": "D:\\repos\\Flog\\App\\Flog.App.csproj",
         "packagesPath": "C:\\Users\\ildar\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\Flog\\Flog.App\\obj\\",
+        "outputPath": "D:\\repos\\Flog\\App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ildar\\AppData\\Roaming\\NuGet\\NuGet.Config"
