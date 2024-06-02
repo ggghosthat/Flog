@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "7JqeGGygU3/AsFctoIt9TKqvLPo8muUhvJqteBHEXNAFEszIChqNxsQ6v/9yx43pMbZApCJdLz+Qe0DbgOPwnA==",
+  "dgSpecHash": "E8Fzrr883o/g57jpCtwzWdODm64l8na1tf2y4m/4Nu5JCme64JpkyWc73Qsg2C6D668Pq7cgLJsL9Yf3bo03xA==",
   "success": true,
   "projectFilePath": "D:\\repos\\Flog\\App\\Flog.App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ildar\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\ildar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\ildar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\ildar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
+  ],
   "logs": []
 }
