@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Entities.Models;
-public class Flog
+namespace Flog.Entities;
+public class Post
 {
-	[Column("UserId")]
+	[Column("flog id")]
 	public Guid Id {get; set;}
 
 	[Display(Name = "title")]

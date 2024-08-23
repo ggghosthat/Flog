@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.Contracts", "Flog.Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.Entity", "Flog.Entity\Flog.Entity.csproj", "{3965CC73-EEB6-44C6-9997-9B07877E9E1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.API", "Flog.API\Flog.API.csproj", "{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.Repository", "Flog.Repository\Flog.Repository.csproj", "{A8C64529-2B6A-4C97-AE2F-B65B7720028A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3965CC73-EEB6-44C6-9997-9B07877E9E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3965CC73-EEB6-44C6-9997-9B07877E9E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3965CC73-EEB6-44C6-9997-9B07877E9E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
