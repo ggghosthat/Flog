@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.Contracts", "Flog.Contracts\Flog.Contracts.csproj", "{F320D5D9-4A75-4F86-A3B8-AFCCDE498BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flog.Contracts", "Flog.Contracts\Flog.Contracts.csproj", "{F320D5D9-4A75-4F86-A3B8-AFCCDE498BF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.Entity", "Flog.Entity\Flog.Entity.csproj", "{3965CC73-EEB6-44C6-9997-9B07877E9E1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flog.Entity", "Flog.Entity\Flog.Entity.csproj", "{3965CC73-EEB6-44C6-9997-9B07877E9E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.API", "Flog.API\Flog.API.csproj", "{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flog.API", "Flog.API\Flog.API.csproj", "{CF786FE4-6DC7-4CAE-9CD1-9A15E370569B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.Repository", "Flog.Repository\Flog.Repository.csproj", "{A8C64529-2B6A-4C97-AE2F-B65B7720028A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flog.Repository", "Flog.Repository\Flog.Repository.csproj", "{A8C64529-2B6A-4C97-AE2F-B65B7720028A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flog.LoggerService", "Flog.LoggerService\Flog.LoggerService.csproj", "{E258B0D2-4C68-48D2-9822-C1CBBDA9E3C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8C64529-2B6A-4C97-AE2F-B65B7720028A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E258B0D2-4C68-48D2-9822-C1CBBDA9E3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E258B0D2-4C68-48D2-9822-C1CBBDA9E3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E258B0D2-4C68-48D2-9822-C1CBBDA9E3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E258B0D2-4C68-48D2-9822-C1CBBDA9E3C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

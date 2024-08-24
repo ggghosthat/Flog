@@ -1,29 +1,25 @@
+using Flog.Contracts.Repository.QueryParameters;
+using Flog.Contracts.Repository;
 using Flog.Entities;
 using Flog.Repository.Context;
-
 using Microsoft.EntityFrameworkCore;
 
 namespace Flog.Repository.Models;
 
-public class PostQueryParameters
-{
-    public int PageSize { get; set; }
-}
-
-public class PostRepository : RepositoryBase<Post>
+public class PostRepository : RepositoryBase<Post>, IPostRepository
 {
     public PostRepository(RepositoryContext repositoryContext) : base(repositoryContext)
     {}
     
     public PostQueryParameters PostQueryParameters { get; set; }
 
-    public void CreatPost(Post post) =>
+    public void CreatePost(Post post) =>
         Create(post);
 
     public void UpdatePost(Post post) =>
-        UpdatePost(post);
+        Update(post);
 
-    public void DeltePost(Post post) => 
+    public void DeletePost(Post post) => 
         Delete(post);
 
     public async Task<IEnumerable<Post>> GetAllPosts(bool trackChanges) =>
@@ -44,7 +40,19 @@ public class PostRepository : RepositoryBase<Post>
             .Take(PostQueryParameters.PageSize)
             .ToListAsync();
 
-    public async Task<IEnumerable<Post>> GetPagedPost(int page, bool trackChanges) 
+    public async Task<Post?> GetPostById(Guid postId, bool trackChanges) =>
+        await GetByCondition(post => post.Id.Equals(postId), trackChanges)
+            .SingleOrDefaultAsync();
+
+    public async Task<IEnumerable<Post>> GetPostsByTag(Guid tagId, bool trackChanges) =>
+        await GetByCondition(post => post.Tags.Contains(tagId), trackChanges)
+            .ToListAsync();
+
+    public async Task<IEnumerable<Post>> GetPostsByTags(IEnumerable<Guid> tagsId, bool trackChanges) =>
+        await GetByCondition(post => post.Tags.Any(id => tagsId.Contains(id)), trackChanges)
+            .ToListAsync();
+
+    public async Task<IEnumerable<Post>> GetPagedPosts(int page, bool trackChanges)
     {
         int pageStart = (page * PostQueryParameters.PageSize) - 1;
         int pageEnd = PostQueryParameters.PageSize - 1;
@@ -55,8 +63,4 @@ public class PostRepository : RepositoryBase<Post>
             .Take(pageEnd)
             .ToListAsync();
     }
-
-    public async Task<Post?> GetPostById(Guid postId, bool trackChanges) =>
-        await GetByCondition(post => post.Id.Equals(postId), trackChanges)
-            .SingleOrDefaultAsync();
 }

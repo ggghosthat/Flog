@@ -1,8 +1,6 @@
 using Flog.Contracts.Repository;
-using Flog.Contracts.Request;
 using Flog.Repository.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace Flog.Repository.Models;

@@ -6,3 +6,6 @@ Flog.Entity/bin
 Flog.Entity/obj
 Flog.Repository/bin
 Flog.Repository/obj
+Flog.LoggerService/bin
+Flog.LoggerService/obj
+/.vs
