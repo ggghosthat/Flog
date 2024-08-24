@@ -1,4 +1,3 @@
-
 using Flog.Entities;
 using Flog.Repository.Context;
 
