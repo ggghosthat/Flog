@@ -1,9 +1,9 @@
 ﻿namespace Flog.Entity.Dto;
 
-public class CreatePost
-{    
+public class EditPostDto
+{
     public string Title { get; set; }
-    
+
     public string Content { get; set; }
 
     public DateTime Created { get; set; }
@@ -17,5 +17,4 @@ public class CreatePost
     public IEnumerable<Guid> Tags { get; set; }
 
     public IEnumerable<Guid> BlockedToView { get; set; }
-
 }

@@ -1,5 +1,6 @@
 ﻿using Flog.API.Routes;
 using Flog.Entities;
+using Flog.Entity.Dto;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,7 @@ namespace Flog.API.Controllers.v1
             return null;
         }
 
-        [HttpGet(ApiRoutes.Post.GetLatestFeed, Name = "GetPagedFeed")]
+        [HttpGet(ApiRoutes.Post.GetPagedFeed, Name = "GetPagedFeed")]
         public async Task<IEnumerable<Post>> GetPagedFeed(int page)
         {
             return null;
@@ -54,13 +55,13 @@ namespace Flog.API.Controllers.v1
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreatePost([FromBody] Post post)
+        public async Task<ActionResult> CreatePost([FromBody] CreatePostDto postDto)
         {
             return null;
         }
 
         [HttpGet]
-        public async Task<ActionResult> EditPost([FromBody] Post post)
+        public async Task<ActionResult> EditPost([FromBody] EditPostDto post)
         {
             return null;
         }
