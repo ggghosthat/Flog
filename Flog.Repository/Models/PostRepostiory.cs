@@ -45,11 +45,11 @@ public class PostRepository : RepositoryBase<Post>, IPostRepository
             .SingleOrDefaultAsync();
 
     public async Task<IEnumerable<Post>> GetPostsByTag(Guid tagId, bool trackChanges) =>
-        await GetByCondition(post => post.Tags.Contains(tagId), trackChanges)
+        await GetByCondition(post => post.Tags.Any(tag => tag.TagId.Equals(tagId)), trackChanges)
             .ToListAsync();
 
     public async Task<IEnumerable<Post>> GetPostsByTags(IEnumerable<Guid> tagsId, bool trackChanges) =>
-        await GetByCondition(post => post.Tags.Any(id => tagsId.Contains(id)), trackChanges)
+        await GetByCondition(post => post.Tags.Any(tag => tagsId.Contains(tag.TagId)), trackChanges)
             .ToListAsync();
 
     public async Task<IEnumerable<Post>> GetPagedPosts(int page, bool trackChanges)

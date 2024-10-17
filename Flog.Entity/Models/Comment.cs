@@ -19,4 +19,8 @@ public class Comment
     [Display(Name = "content")]
 	[Required(ErrorMessage = "Content is required.")]
 	public string Content { get; set; }
+
+    public Comment ParentComment { get; set; }
+
+    public IEnumerable<Comment> ChildComments { get; set; }
 }

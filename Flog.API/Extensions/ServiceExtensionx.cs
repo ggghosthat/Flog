@@ -30,8 +30,13 @@ public static class ServiceExtensions
     public static void ConfigureRepositoryManager(this IServiceCollection services) =>
         services.AddScoped<IRepositoryManager, Repositorymanager>();
 
-    public static void ConfigureSwagger(this IServiceCollection services)
-    {
+    public static void RegisterMediatR(this IServiceCollection services) =>
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
+
+    public static void RegisterAutoMapper(this IServiceCollection services) =>
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+    public static void ConfigureSwagger(this IServiceCollection services) =>
         services.AddSwaggerGen(s =>
         {
             s.SwaggerDoc("v1", new OpenApiInfo { Title = "Company Employee API", Version = "v1" });
@@ -61,5 +66,4 @@ public static class ServiceExtensions
                 }
             });
         });
-    }
 }

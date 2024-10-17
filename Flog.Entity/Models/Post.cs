@@ -26,12 +26,13 @@ public class Post
 	[Required(ErrorMessage = "Published place is required.")]
 	public Guid PodId { get; set; }
 
-	public bool Private { get; set; } = false;
+	public bool Private { get; set; }
 
-	public IEnumerable<Guid> AllowedViewers { get; set; }
+	public IEnumerable<User> BlockedToView { get; set; }
 
-	public IEnumerable<Guid> Tags { get; set; }
+	public IEnumerable<Tag> Tags { get; set; }
 
+	public IEnumerable<Comment> Comments { get; set; }
 	public long Viewed { get; set; }
 
 	public long Rate { get; set; }
